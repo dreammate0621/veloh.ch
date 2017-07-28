@@ -1,5 +1,12 @@
 @extends('layouts.default')
 
+@section('additional_styles')
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.css">
+<link rel="stylesheet" href="{{asset('assets/css/datetimepicker.css')}}">
+
+@endsection
+
 @section('banner_content')
 
 <div class="banner-wrapper">
@@ -83,6 +90,7 @@
 								<span class="field-comment">Bis 6 Börsendaten sind hier gleichzeitig erfassbar</span>
 								<div class="form-field">
 									<label for="">Börsendaten*</label>
+									<datetimepicker data-ng-model="data.dateDropDownLink" data-datetimepicker-config=""/>
 								</div>
 								<div class="form-field">
 									<label for="register_location">Veranstaltungsort</label>
@@ -94,7 +102,11 @@
 								</div>
 								<div class="form-field">
 									<label for="register_city">Ort* / Kanton*</label>
-									<input type="text" name="register_city" id="register_city" placeholder="z.B. Zürich / ZH" />
+									<select id="register_city" ui-select2 ng-model="register_city" data-placeholder="z.B. Zürich / ZH">
+										<option value=""></option>
+										<option ng-repeat="code in regionCodes" ng-model = "register_city" ng-value="code">[[code]]</option>
+									</select>
+									<!-- <input type="text" name="register_city" id="register_city" placeholder="z.B. Zürich / ZH" /> -->
 								</div>
 								<div class="form-field">
 									<label for="register_sale">Verkauf*</label>
@@ -271,3 +283,6 @@
 
 @endsection
 
+@section('additional_scripts')
+
+@endsection

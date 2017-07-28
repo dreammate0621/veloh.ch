@@ -29,26 +29,51 @@
 
     <div class="main-wrapper">
       <div class="main-menu">
-        <div class="menu-top-section">
-          <a class="menu-item" href="/veloboerse-datum">alle Velobörsen</a>
-          <a class="menu-item" href="/veloboerse-zuerich">Velobörse Zürich</a>
-          <a class="menu-item" href="/veloboerse-basel">Velobörse Basel</a>
-          <a class="menu-item" href="/veloboerse-luzern">Velobörse Luzern</a>
-          <a class="menu-item" href="/veloboerse-bern">Velobörse Bern</a>
-          <a class="menu-item" href="/veloboerse-olten">Velobörse Olten</a>
-          <a class="menu-item" href="/veloboerse-biel">Velobörse Biel</a>
-          <a class="menu-item" href="/veloboerse-winterthur">Velobörse Winterthur</a>
-        </div>
-        <div class="menu-bottom-section">
-          <a class="menu-item" href="/">home</a>
-          <a class="menu-item" href="/veloboerse-datum">Velobörsen Daten</a>
-          <a class="menu-item" href="/veloboerse-eintragen">Börse eintragen</a>
-          <a class="menu-item" href="/fahrrad-kaufen-verkaufen">Velo verkaufen</a>
-          <a class="menu-item" href="/fahrrad-kaufen-verkaufen">Velo Kauftipps</a>
-          <a class="menu-item" href="/velo-recycling">Velo schenken</a>
-          <a class="menu-item" href="/about-veloboersen-ch">About</a>
-          <a class="menu-item" href="http://www.velomaerkte.ch">% Velo Outlet %</a>
-        </div>
+        <div class="toggle-menu"></div>
+        <ul class="menu-container">
+          <li class="menu-item menu-sub-container">
+            <a class="menu-item-link mobile-visible link-green">Velobörse</a>
+            <ul class="sub-menu">
+              <li class="menu-item"><a class="menu-item-link link-blue" href="/veloboerse-datum">Alle<span class="mobile-hidden">&nbsp;Velobörsen</span></a></li>
+              <li class="menu-item"><a class="menu-item-link link-blue" href="/veloboerse-zuerich"><span class="mobile-hidden">Velobörse&nbsp;</span>Zürich</a></li>
+              <li class="menu-item"><a class="menu-item-link link-blue" href="/veloboerse-basel"><span class="mobile-hidden">Velobörse&nbsp;</span>Basel</a></li>
+              <li class="menu-item"><a class="menu-item-link link-blue link-blue" href="/veloboerse-luzern"><span class="mobile-hidden">Velobörse&nbsp;</span>Luzern</a></li>
+              <li class="menu-item"><a class="menu-item-link link-blue" href="/veloboerse-bern"><span class="mobile-hidden">Velobörse&nbsp;</span>Bern</a></li>
+              <li class="menu-item"><a class="menu-item-link link-blue" href="/veloboerse-olten"><span class="mobile-hidden">Velobörse&nbsp;</span>Olten</a></li>
+              <li class="menu-item"><a class="menu-item-link link-blue" href="/veloboerse-biel"><span class="mobile-hidden">Velobörse&nbsp;</span>Biel</a></li>
+              <li class="menu-item"><a class="menu-item-link link-blue" href="/veloboerse-winterthur"><span class="mobile-hidden">Velobörse </span>Winterthur</a></li>
+            </ul>
+          </li>
+          <li class="menu-item"><a class="menu-item-link link-green" href="/">Home</a></li>
+          <li class="menu-item"><a class="menu-item-link link-green" href="/veloboerse-datum">Velobörsen Daten</a></li>
+          <li class="menu-item"><a class="menu-item-link link-green" href="/veloboerse-eintragen">Börse eintragen</a></li>
+          <li class="menu-item"><a class="menu-item-link link-green" href="/fahrrad-kaufen-verkaufen">Velo verkaufen</a></li>
+          <li class="menu-item"><a class="menu-item-link link-green" href="/fahrrad-kaufen-verkaufen">Velo Kauftipps</a></li>
+          <li class="menu-item"><a class="menu-item-link link-green" href="/velo-recycling">Velo schenken</a></li>
+          <li class="menu-item"><a class="menu-item-link link-green" href="/about-veloboersen-ch">About</a></li>
+          <li class="menu-item"><a class="menu-item-link link-green" href="http://www.velomaerkte.ch">% Velo Outlet %</a></li>
+        </ul>
+
+        <!-- <ul class="menu-top-section">
+          <li class="menu-item"><a class="menu-item-link" href="/veloboerse-datum">alle Velobörsen</a></li>
+          <li class="menu-item"><a class="menu-item-link" href="/veloboerse-zuerich">Velobörse Zürich</a></li>
+          <li class="menu-item"><a class="menu-item-link" href="/veloboerse-basel">Velobörse Basel</a></li>
+          <li class="menu-item"><a class="menu-item-link" href="/veloboerse-luzern">Velobörse Luzern</a></li>
+          <li class="menu-item"><a class="menu-item-link" href="/veloboerse-bern">Velobörse Bern</a></li>
+          <li class="menu-item"><a class="menu-item-link" href="/veloboerse-olten">Velobörse Olten</a></li>
+          <li class="menu-item"><a class="menu-item-link" href="/veloboerse-biel">Velobörse Biel</a></li>
+          <li class="menu-item"><a class="menu-item-link" href="/veloboerse-winterthur">Velobörse Winterthur</a></li>
+        </ul>
+        <ul class="menu-bottom-section">
+          <li class="menu-item"><a class="menu-item-link" href="/">home</a></li>
+          <li class="menu-item"><a class="menu-item-link" href="/veloboerse-datum">Velobörsen Daten</a></li>
+          <li class="menu-item"><a class="menu-item-link" href="/veloboerse-eintragen">Börse eintragen</a></li>
+          <li class="menu-item"><a class="menu-item-link" href="/fahrrad-kaufen-verkaufen">Velo verkaufen</a></li>
+          <li class="menu-item"><a class="menu-item-link" href="/fahrrad-kaufen-verkaufen">Velo Kauftipps</a></li>
+          <li class="menu-item"><a class="menu-item-link" href="/velo-recycling">Velo schenken</a></li>
+          <li class="menu-item"><a class="menu-item-link" href="/about-veloboersen-ch">About</a></li>
+          <li class="menu-item"><a class="menu-item-link" href="http://www.velomaerkte.ch">% Velo Outlet %</a></li>
+        </ul> -->
       </div>
       <!-- Main Content -->
       @yield('main_content')
@@ -57,11 +82,19 @@
     <!-- Include Main JS Files -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
 
     <!-- Include Library Files -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-touch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-animate.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/6.1.1/rzslider.min.js"></script>
+    // <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-animate.min.js"></script>
+
+
+
     <!-- Include Angular MVC Strucuture -->
     <script src="{{asset('assets/jsmvc/app.js')}}" type="text/javascript"></script>
 
@@ -69,8 +102,14 @@
       <script src="{{asset('assets/jsmvc/controllers/pageController.js')}}" type="text/javascript"></script>
 
       <script src="{{asset('assets/jsmvc/directives/slick.js')}}" type="text/javascript"></script>
+      <script src="{{asset('assets/jsmvc/directives/select2.js')}}" type="text/javascript"></script>
+      <script src="{{asset('assets/jsmvc/directives/range-picker.js')}}" type="text/javascript"></script>
+      <script src="{{asset('assets/jsmvc/directives/angular-slider.js')}}" type="text/javascript"></script>
+      <script src="{{asset('assets/jsmvc/directives/datetimepicker.js')}}" type="text/javascript"></script>
 
     <!-- Include Additional JS Files -->
     @yield('additional_scripts')
+
+    <script src="{{asset('assets/js/main.js')}}" type="text/javascript"></script>
   </body>
 </html>

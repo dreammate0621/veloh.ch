@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('index');
 });
 
 Route::get('/veloboerse-basel', function () {
@@ -62,3 +62,11 @@ Route::get('/veloboerse-biel', function () {
 Route::get('/about-veloboersen-ch', function () {
     return view('pages/about-veloboersen-ch');
 });
+
+Route::post('/register', [
+    'as' => 'register',
+    'uses' => 'VeloController@register']);
+
+// Auth::routes();
+
+// Route::get('/home', 'HomeController@index');

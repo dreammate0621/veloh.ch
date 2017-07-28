@@ -34,6 +34,10 @@ span {
 	font-size: inherit;
 }
 
+ul li {
+  box-sizing: border-box;
+}
+
 .bg-overlay {
 	position: fixed;
 	z-index: -1;
@@ -94,8 +98,72 @@ span {
 
 	.main-menu .menu-top-section, .main-menu .menu-bottom-section {
 		font-size: 0;
+		display: block;
+		padding: 0;
+		margin: 0;
 	}
-	.main-menu .menu-item {
+
+	.main-menu .toggle-menu {
+		display: none;
+    height: 45px;
+    position: relative;
+    cursor: pointer;
+    transition: all .4s linear;
+	}
+
+	.main-menu .toggle-menu:before {
+    position: absolute;
+    top: 16px;
+    right: 17px;
+    display: block;
+    height: 2px;
+    width: 20px;
+    background: #10008f;
+    content: '';
+    transition: all .4s linear;
+	}
+
+	.main-menu .toggle-menu:after {
+    position: absolute;
+    top: 22px;
+    right: 17px;
+    display: block;
+    height: 4px;
+    width: 20px;
+    border-top: 2px solid #10008f;
+    border-bottom: 2px solid #10008f;
+    content: '';
+    transition: all .4s linear;
+	}
+
+	.main-menu .toggle-menu:hover {
+		background: #10008f;
+	}
+
+	.main-menu .toggle-menu:hover:before {
+		background: #ffffff;
+	}
+
+	.main-menu .toggle-menu:hover:after {
+		border-color: #ffffff;
+	}
+
+	.main-menu .menu-container {
+		font-size: 0;
+		display: block;
+		padding: 0;
+		margin: 0;
+	}
+
+	.link-blue {
+		color: #88aadd;
+	}
+
+	.link-green {
+		color: #88aa00;
+	}
+
+	.menu-container .menu-item {
 		display: inline-block;
 		width: 12.5%;
 		color: #88aadd;
@@ -103,10 +171,120 @@ span {
 		font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
 		font-size: medium;
 		text-align: center;
+		cursor: pointer;
+		transition: all .2s linear;
 	}
 
-	.main-menu .menu-bottom-section .menu-item {
-		color: #88aa00;
+	.menu-container .menu-item .menu-item-link, .menu-container .menu-item .menu-item-link:active, .menu-container .menu-item .menu-item-link:focus {
+		text-decoration: none;
+	}
+
+	.menu-container .menu-sub-container {
+    display: block;
+    width: 100%;
+    position: relative;
+	}
+
+	.menu-sub-container > .menu-item-link {
+		display: none;
+	}
+
+	.menu-container .sub-menu {
+		font-size: 0;
+		display: block;
+		padding: 0;
+		margin: 0;
+	}
+
+
+	@media screen and (max-width: 768px) {
+		.main-menu {
+			padding: 0;
+		}
+
+		.main-menu .toggle-menu {
+			display: block;
+		}
+
+		.main-menu .menu-container {
+			display: none;
+		}
+
+		.menu-container .menu-item {
+			display: block;
+			width: 100%;
+			text-align: left;
+		}
+
+		.menu-container .menu-item .menu-item-link {
+			display: block;
+			padding: 10px 20px;
+		}
+
+		.menu-container .menu-sub-container.open .menu-item-link {
+			font-weight: bold;
+		}
+
+		.menu-container .menu-sub-container .sub-menu .menu-item-link {
+			text-align: center;
+		}
+
+		.menu-container .menu-sub-container:before {
+			content: '▾';
+			position: absolute;
+			right: 20px;
+			top: 5px;
+			font-size: 40px;
+			line-height: 30px;
+			color: #10008f;
+		}
+
+		.menu-container .menu-sub-container.open:before {
+			content: '▴';
+		}
+
+		.menu-container .menu-sub-container:hover:before {
+			color: #ffffff;
+		}
+
+		.menu-container .menu-sub-container.open:hover > .menu-item-link {
+			background-color: #10008f;
+			color: #ffffff;
+		}
+
+		.menu-container .sub-menu .menu-item {
+			padding: 0px 20px;
+		}
+
+		.menu-container .menu-item span.mobile-hidden {
+			display: none;
+		}
+
+		.menu-container .menu-item:not(.open):hover {
+			background-color: #10008f;
+		}
+
+		.menu-container .menu-item:not(.open):hover .menu-item-link {
+			color: #ffffff;
+		}
+
+		.menu-container .menu-item.menu-sub-container .menu-item:hover {
+			background-color: #88aadd;	
+		}
+
+		.menu-container .menu-item.menu-sub-container .menu-item:hover .menu-item-link {
+			color: #10008f;
+		}
+
+		.menu-sub-container > .menu-item-link {
+			display: block;
+		}
+
+		.menu-sub-container .sub-menu {
+			display: none;
+		}
+
+		.menu-sub-container .
 	}
 
 
@@ -898,7 +1076,7 @@ span {
 		font-size: 10px;
 	}
 
-	.form-field input {
+	.form-field input, .form-field select {
     display: inline-block;
     vertical-align: middle;
     width: 60%;
@@ -906,6 +1084,10 @@ span {
     border: none;
     height: 22px;
     text-align: center;
+	}
+
+	.form-field .select2-container span {
+		display: block;
 	}
 
 	.form-field textarea {
